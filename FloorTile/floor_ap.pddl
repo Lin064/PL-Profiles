@@ -4,16 +4,10 @@
     (:predicate up
                :parameters (?from ?to)
                :effect(
-               (assign (?from x y) (function distribute_grid_around_point (objects ?from)))
+               (assign (?from y x) (function distribute_grid_around_point (objects ?from)))
+               (assign (?to y x) (function distribute_grid_around_point (objects ?to)))
                (equal (?from color) #33ccff)
-               )
-    )
-
-    (:predicate down
-               :parameters (?from ?to)
-               :effect(
-               (assign (?from x y) (function distribute_grid_around_point (objects ?from)))
-                (equal (?from color) #33ccff)
+               (equal (?to color) #33ccff)
                )
     )
     
