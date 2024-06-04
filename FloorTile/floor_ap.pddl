@@ -1,4 +1,5 @@
 (define (animation floortile)
+    (:cost_keyword total-cost)
   
     (:predicate up
                :parameters (?from ?to)
