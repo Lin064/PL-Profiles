@@ -1,4 +1,5 @@
 (define (animation sokuban)
+    (:cost_keyword total-cost)
   
     (:predicate IS-NONGOAL
         :parameters (?p)

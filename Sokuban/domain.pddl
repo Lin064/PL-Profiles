@@ -63,7 +63,7 @@
                       (at ?s ?to)
                       (clear ?np)
                       (at-goal ?s)
-                      (increase (total-cost) 1)
+                      (increase (total-cost) 5)
                       )
    )
 )
