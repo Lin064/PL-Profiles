@@ -19,25 +19,30 @@
     (:predicate tailsnake
               :parameters (?x)
               :custom tail
+              :priority 3
               :effect(
-              (equal (tail x) (?x x))
-              (equal (tail y) (?x y))
+              (equal (?x prefabImage) img-square)
+              (equal (?x color) red)
+              (equal (?x depth) 3)
               )
     )
     
     (:predicate nextsnake
               :parameters (?x ?y)
+              :priority 1
               :effect(
+              (equal (?x prefabImage) img-square)
               (equal (?y color) #009900)
+              (equal (?y depth) 3)
               )
     )
     
     (:predicate ispoint
               :parameters (?x)
-              :custom apple
               :effect(
                 (equal (?x prefabImage) img-apple)
-                (equal (?x color) #FFFFFF)
+                (equal (?x color) #ffffff)
+                (equal (?x depth) 2)
               )
     )
   
@@ -57,20 +62,6 @@
                )
   )
   
-    (:visual tail
-              :type custom
-              :objects tail
-              :properties(
-                (prefabImage img-square)
-                (showName FALSE)
-                (x Null)
-                (y Null)
-                (color #009900)
-                (width 80)
-                (height 80)
-                (depth 3)
-              )
-  )
   
   
 ; Default node type. 
